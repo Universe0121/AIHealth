@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design 3 颜色系统 -->
+
+    <!-- 主色调 -->
+    <color name="primary">#6750A4</color>
+    <color name="primary_dark">#4F378B</color>
+    <color name="primary_light">#EADDFF</color>
+    <color name="primary_container">#EADDFF</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_primary_container">#21005D</color>
+
+    <!-- 次要色调 -->
+    <color name="secondary">#625B71</color>
+    <color name="secondary_dark">#4A4458</color>
+    <color name="secondary_light">#E8DEF8</color>
+    <color name="secondary_container">#E8DEF8</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="on_secondary_container">#1D192B</color>
+
+    <!-- 第三色调 -->
+    <color name="tertiary">#7D5260</color>
+    <color name="tertiary_dark">#633B48</color>
+    <color name="tertiary_light">#FFD8E4</color>
+    <color name="tertiary_container">#FFD8E4</color>
+    <color name="on_tertiary">#FFFFFF</color>
+    <color name="on_tertiary_container">#31111D</color>
+
+    <!-- 背景色 -->
+    <color name="background">#FFFBFE</color>
+    <color name="surface">#FFFBFE</color>
+    <color name="surface_variant">#E7E0EC</color>
+    <color name="surface_bright">#FFFBFE</color>
+    <color name="surface_dim">#DED8E1</color>
+    <color name="surface_container">#F3EDF7</color>
+    <color name="surface_container_low">#F7F2FA</color>
+    <color name="surface_container_lowest">#FFFFFF</color>
+    <color name="surface_container_high">#ECE6F0</color>
+    <color name="surface_container_highest">#E6E0E9</color>
+
+    <!-- 文本颜色 -->
+    <color name="on_surface">#1C1B1F</color>
+    <color name="on_surface_variant">#49454F</color>
+    <color name="on_background">#1C1B1F</color>
+    <color name="on_surface_inverse">#F4EFF4</color>
+
+    <!-- 轮廓颜色 -->
+    <color name="outline">#79747E</color>
+    <color name="outline_variant">#CAC4D0</color>
+
+    <!-- 错误颜色 -->
+    <color name="error">#B3261E</color>
+    <color name="error_dark">#8C1D18</color>
+    <color name="error_light">#F9DEDC</color>
+    <color name="error_container">#F9DEDC</color>
+    <color name="on_error">#FFFFFF</color>
+    <color name="on_error_container">#410E0B</color>
+
+    <!-- 成功/正确颜色 -->
+    <color name="success">#0D7A0D</color>
+    <color name="success_green">#4CAF50</color>
+    <color name="success_light">#E8F5E9</color>
+    <color name="success_container">#E8F5E9</color>
+    <color name="on_success">#FFFFFF</color>
+    <color name="on_success_container">#0A5C0A</color>
+
+    <!-- 警告颜色 -->
+    <color name="warning">#FF9800</color>
+    <color name="warning_light">#FFF3E0</color>
+    <color name="warning_container">#FFF3E0</color>
+    <color name="on_warning">#000000</color>
+    <color name="on_warning_container">#5C3D00</color>
+
+    <!-- 信息颜色 -->
+    <color name="info">#2196F3</color>
+    <color name="info_light">#E3F2FD</color>
+    <color name="info_container">#E3F2FD</color>
+    <color name="on_info">#FFFFFF</color>
+    <color name="on_info_container">#0D47A1</color>
+
+    <!-- 中性灰色 -->
+    <color name="grey_50">#FAFAFA</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_200">#EEEEEE</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_400">#BDBDBD</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="grey_600">#757575</color>
+    <color name="grey_700">#616161</color>
+    <color name="grey_800">#424242</color>
+    <color name="grey_900">#212121</color>
+
+
+    <!-- 语义别名（简化使用） -->
+    <color name="grey_light">@color/grey_300</color>
+    <color name="grey_medium">@color/grey_500</color>
+    <color name="grey_dark">@color/grey_700</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- 透明颜色 -->
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent">#80000000</color>
+    <color name="semi_transparent_white">#80FFFFFF</color>
+
+    <!-- 应用特定颜色 -->
+
+    <!-- 健康评分颜色 -->
+    <color name="health_score_excellent">#00C853</color> <!-- 优秀 - 绿色 -->
+    <color name="health_score_good">#8BC34A</color> <!-- 良好 - 浅绿色 -->
+    <color name="health_score_fair">#FFC107</color> <!-- 一般 - 黄色 -->
+    <color name="health_score_poor">#FF9800</color> <!-- 需改善 - 橙色 -->
+    <color name="health_score_warning">#F44336</color> <!-- 警告 - 红色 -->
+
+    <!-- 血压状态颜色 -->
+    <color name="bp_normal">#4CAF50</color> <!-- 正常 - 绿色 -->
+    <color name="bp_elevated">#FFC107</color> <!-- 偏高 - 黄色 -->
+    <color name="bp_high">#FF9800</color> <!-- 高血压1级 - 橙色 -->
+    <color name="bp_very_high">#F44336</color> <!-- 高血压2级 - 红色 -->
+
+    <!-- 血糖状态颜色 -->
+    <color name="bs_normal">#4CAF50</color> <!-- 正常 - 绿色 -->
+    <color name="bs_prediabetes">#FFC107</color> <!-- 糖尿病前期 - 黄色 -->
+    <color name="bs_diabetes">#F44336</color> <!-- 糖尿病 - 红色 -->
+
+    <!-- BMI状态颜色 -->
+    <color name="bmi_underweight">#2196F3</color> <!-- 偏瘦 - 蓝色 -->
+    <color name="bmi_normal">#4CAF50</color> <!-- 正常 - 绿色 -->
+    <color name="bmi_overweight">#FF9800</color> <!-- 超重 - 橙色 -->
+    <color name="bmi_obese">#F44336</color> <!-- 肥胖 - 红色 -->
+
+    <!-- 饮食分析颜色 -->
+    <color name="nutrient_protein">#2196F3</color> <!-- 蛋白质 - 蓝色 -->
+    <color name="nutrient_carb">#4CAF50</color> <!-- 碳水化合物 - 绿色 -->
+    <color name="nutrient_fat">#FF9800</color> <!-- 脂肪 - 橙色 -->
+    <color name="nutrient_fiber">#9C27B0</color> <!-- 纤维素 - 紫色 -->
+    <color name="nutrient_vitamin">#F44336</color> <!-- 维生素 - 红色 -->
+    <color name="nutrient_mineral">#795548</color> <!-- 矿物质 - 棕色 -->
+
+    <!-- 标签颜色 -->
+    <color name="tag_primary">#EADDFF</color>
+    <color name="tag_primary_text">#21005D</color>
+    <color name="tag_secondary">#E8DEF8</color>
+    <color name="tag_secondary_text">#1D192B</color>
+    <color name="tag_success">#E8F5E9</color>
+    <color name="tag_success_text">#0D7A0D</color>
+    <color name="tag_warning">#FFF3E0</color>
+    <color name="tag_warning_text">#FF9800</color>
+    <color name="tag_error">#F9DEDC</color>
+    <color name="tag_error_text">#B3261E</color>
+    <color name="tag_info">#E3F2FD</color>
+    <color name="tag_info_text">#2196F3</color>
+
+    <!-- 图表颜色 -->
+    <color name="chart_color_1">#FF6B6B</color> <!-- 红色 -->
+    <color name="chart_color_2">#4ECDC4</color> <!-- 青色 -->
+    <color name="chart_color_3">#FFD166</color> <!-- 黄色 -->
+    <color name="chart_color_4">#06D6A0</color> <!-- 绿色 -->
+    <color name="chart_color_5">#118AB2</color> <!-- 蓝色 -->
+    <color name="chart_color_6">#EF476F</color> <!-- 粉色 -->
+    <color name="chart_color_7">#073B4C</color> <!-- 深蓝 -->
+    <color name="chart_color_8">#7209B7</color> <!-- 紫色 -->
+
+    <!-- 渐变颜色 -->
+    <color name="gradient_start">#2196F3</color>
+    <color name="gradient_middle">#00BCD4</color>
+    <color name="gradient_end">#4CAF50</color>
+
+    <!-- 阴影颜色 -->
+    <color name="shadow_light">#1A000000</color>
+    <color name="shadow_medium">#33000000</color>
+    <color name="shadow_dark">#4D000000</color>
+
+    <!-- 分隔线颜色 -->
+    <color name="divider">#1F000000</color>
+    <color name="divider_light">#0A000000</color>
+    <color name="divider_dark">#33000000</color>
+
+    <!-- 图标颜色 -->
+    <color name="icon_primary">#6750A4</color>
+    <color name="icon_secondary">#625B71</color>
+    <color name="icon_tertiary">#7D5260</color>
+    <color name="icon_disabled">#1F000000</color>
+    <color name="icon_active">#6750A4</color>
+    <color name="icon_inactive">#9E9E9E</color>
+
+    <!-- 按钮颜色 -->
+    <color name="button_primary">#6750A4</color>
+    <color name="button_primary_text">#FFFFFF</color>
+    <color name="button_secondary">#EADDFF</color>
+    <color name="button_secondary_text">#21005D</color>
+    <color name="button_outline">#6750A4</color>
+    <color name="button_outline_text">#6750A4</color>
+    <color name="button_disabled">#E0E0E0</color>
+    <color name="button_disabled_text">#9E9E9E</color>
+
+    <!-- 卡片颜色 -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_elevated_background">#FFFFFF</color>
+    <color name="card_outline">#E0E0E0</color>
+    <color name="card_shadow">#1A000000</color>
+
+    <!-- 输入框颜色 -->
+    <color name="input_background">#FFFFFF</color>
+    <color name="input_background_disabled">#F5F5F5</color>
+    <color name="input_outline">#E0E0E0</color>
+    <color name="input_outline_focused">#6750A4</color>
+    <color name="input_outline_error">#B3261E</color>
+    <color name="input_hint">#9E9E9E</color>
+    <color name="input_text">#212121</color>
+    <color name="input_label">#616161</color>
+
+    <!-- 开关颜色 -->
+    <color name="switch_track">#E0E0E0</color>
+    <color name="switch_track_checked">#A78BFA</color>
+    <color name="switch_thumb">#FFFFFF</color>
+    <color name="switch_thumb_checked">#6750A4</color>
+
+    <!-- 进度条颜色 -->
+    <color name="progress_background">#E0E0E0</color>
+    <color name="progress_primary">#6750A4</color>
+    <color name="progress_secondary">#4CAF50</color>
+    <color name="progress_warning">#FF9800</color>
+    <color name="progress_error">#F44336</color>
+
+    <!-- 状态栏和导航栏颜色 -->
+    <color name="status_bar">#4F378B</color>
+    <color name="navigation_bar">#FFFFFF</color>
+
+    <!-- 对话框颜色 -->
+    <color name="dialog_background">#FFFFFF</color>
+    <color name="dialog_scrim">#52000000</color>
+    <color name="dialog_title">#212121</color>
+    <color name="dialog_message">#616161</color>
+
+    <!-- 工具提示颜色 -->
+    <color name="tooltip_background">#616161</color>
+    <color name="tooltip_text">#FFFFFF</color>
+
+    <!-- 选择器颜色 -->
+    <color name="selection_primary">#1F6750A4</color>
+    <color name="selection_secondary">#1F625B71</color>
+    <color name="selection_overlay">#0A6750A4</color>
+
+    <!-- 波纹效果颜色 -->
+    <color name="ripple_primary">#1F6750A4</color>
+    <color name="ripple_secondary">#1F625B71</color>
+    <color name="ripple_surface">#1F000000</color>
+    <!-- 营养分布颜色 -->
+    <color name="protein_color">#2196F3</color>    <!-- 蛋白质 - 蓝色 -->
+    <color name="carb_color">#4CAF50</color>       <!-- 碳水化合物 - 绿色 -->
+    <color name="fat_color">#FF9800</color>        <!-- 脂肪 - 橙色 -->
+
+    <!-- 其他你可能需要的颜色 -->
+    <color name="vitamin_color">#9C27B0</color>    <!-- 维生素 - 紫色 -->
+    <color name="fiber_color">#795548</color>      <!-- 纤维 - 棕色 -->
+    <color name="mineral_color">#607D8B</color>    <!-- 矿物质 - 蓝灰色 -->
+    <color name="accent">#FF4081</color>
+</resources>

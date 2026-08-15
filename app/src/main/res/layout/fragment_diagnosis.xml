@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- 标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="诊断单识别"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 图片预览区域 -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/bg_image_placeholder"
+            android:padding="4dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/iv_diagnosis"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:contentDescription="诊断单图片预览"
+                android:src="@android:drawable/ic_menu_camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击拍照"
+                android:textColor="@color/grey_medium"
+                android:textSize="12sp"
+                android:layout_gravity="center"
+                android:padding="8dp" />
+
+        </FrameLayout>
+
+        <!-- 拍照按钮 -->
+        <Button
+            android:id="@+id/btn_take_photo"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text=" 拍照"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_marginBottom="16dp" />
+
+        <!-- OCR识别结果标题 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="识别结果"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <!-- OCR识别结果区域 -->
+        <TextView
+            android:id="@+id/tv_ocr_result"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:padding="12dp"
+            android:background="@drawable/bg_rounded_corner"
+            android:text="识别结果将显示在这里"
+            android:textSize="14sp"
+            android:textColor="@color/grey_dark"
+            android:lineSpacingExtra="4dp"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 保存按钮 -->
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text=" 保存到数据库"
+            android:backgroundTint="@color/success"
+            android:textColor="@color/white"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 统计按钮区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_quick_stats"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text=" 快速统计"
+                android:backgroundTint="@color/primary_light"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            <Button
+                android:id="@+id/btn_view_charts"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text=" 查看图表"
+                android:backgroundTint="@color/secondary_light"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        </LinearLayout>
+
+        <!-- 历史记录标题 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" 历史记录"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="筛选"
+                android:textSize="12sp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+        </LinearLayout>
+
+        <!-- 空状态提示 -->
+        <TextView
+            android:id="@+id/tv_empty_history"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:text="暂无历史记录\n点击上方按钮开始识别"
+            android:textSize="14sp"
+            android:textColor="@color/grey_medium"
+            android:visibility="visible" />
+
+        <!-- 历史记录列表 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_history"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

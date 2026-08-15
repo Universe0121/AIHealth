@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="诊断结论"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+        <EditText
+            android:id="@+id/et_diagnosis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="例如：原发性高血压2级"
+            android:minLines="2"
+            android:maxLines="4"
+            android:inputType="textMultiLine"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="医嘱"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/et_advice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="例如：口服硝苯地平，每日一次"
+            android:minLines="2"
+            android:maxLines="4"
+            android:inputType="textMultiLine"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="过敏提示"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/et_allergy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="例如：无，或青霉素过敏"
+            android:minLines="1"
+            android:maxLines="2"/>
+
+        <!-- 血压输入框 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="血压"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/et_blood_pressure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="例如：120/80 mmHg"
+            android:minLines="1"
+            android:maxLines="2"/>
+
+        <!-- 血糖输入框 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="血糖"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/et_blood_sugar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="例如：5.6 mmol/L"
+            android:minLines="1"
+            android:maxLines="2"/>
+
+    </LinearLayout>
+</ScrollView>

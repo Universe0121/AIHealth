@@ -1,0 +1,9 @@
+## Copy this file to local.properties for local builds.
+## Do not commit local.properties.
+
+# Android SDK path, for example:
+# sdk.dir=C:\\Users\\YourName\\AppData\\Local\\Android\\Sdk
+
+# Baidu AI credentials used by app/src/main/java/com/oppo/AIHealth/utils/BaiduAIService.java
+BAIDU_API_KEY=
+BAIDU_SECRET_KEY=

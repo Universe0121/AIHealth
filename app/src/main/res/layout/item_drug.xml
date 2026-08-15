@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <!-- 复选框：批量选择时显示 -->
+        <CheckBox
+            android:id="@+id/cb_batch_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="gone" />
+
+        <!-- 原有内容区域（垂直排列） -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical">
+
+            <!-- 药品名称 -->
+            <TextView
+                android:id="@+id/tv_drug_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="药品名称"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"
+                android:layout_marginBottom="8dp" />
+
+            <!-- 服用时间 -->
+            <TextView
+                android:id="@+id/tv_take_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="服用时间: 08:00"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+
+            <!-- 服用次数 -->
+            <TextView
+                android:id="@+id/tv_take_times"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="每日次数: 3次"
+                android:textSize="14sp"
+                android:layout_marginBottom="4dp" />
+
+            <!-- 服用状态 -->
+            <TextView
+                android:id="@+id/tv_take_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="状态: 未服用"
+                android:textSize="14sp"
+                android:textColor="@color/warning"
+                android:layout_marginBottom="4dp" />
+
+            <!-- 创建时间 -->
+            <TextView
+                android:id="@+id/tv_create_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="创建时间: 2023-01-01 08:00"
+                android:textSize="12sp"
+                android:textColor="@color/grey_medium"
+                android:layout_marginBottom="12dp" />
+
+            <!-- 操作按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <Button
+                    android:id="@+id/btn_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="编辑"
+                    android:textSize="12sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btn_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="删除"
+                    android:textSize="12sp"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

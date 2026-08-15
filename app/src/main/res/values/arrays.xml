@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 药品管理相关 -->
+    <string-array name="time_slots">
+        <item>早晨</item>
+        <item>中午</item>
+        <item>晚上</item>
+        <item>睡前</item>
+        <item>饭前</item>
+        <item>饭后</item>
+    </string-array>
+
+    <!-- 运动类型 -->
+    <string-array name="sport_types">
+        <item>跑步</item>
+        <item>游泳</item>
+        <item>骑自行车</item>
+        <item>瑜伽</item>
+        <item>健身房训练</item>
+        <item>羽毛球</item>
+        <item>篮球</item>
+        <item>足球</item>
+    </string-array>
+
+    <!-- 运动强度 -->
+    <string-array name="intensity_levels">
+        <item>低强度</item>
+        <item>中等强度</item>
+        <item>高强度</item>
+    </string-array>
+</resources>

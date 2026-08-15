@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用名称 -->
+    <string name="app_name">AI健康管家</string>
+    <string name="app_version">v1.0</string>
+    <string name="diagnosis">诊断单识别</string>
+    <string name="drug_management">药品管理</string>
+    <string name="sport_guide">运动指导</string>
+    <string name="visualization">数据可视化</string>
+
+    <!-- 通用文本 -->
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="edit">编辑</string>
+    <string name="delete">删除</string>
+    <string name="confirm">确认</string>
+    <string name="retry">重试</string>
+    <string name="refresh">刷新</string>
+    <string name="back">返回</string>
+    <string name="next">下一步</string>
+    <string name="close">关闭</string>
+    <string name="loading">加载中...</string>
+    <string name="no_data">暂无数据</string>
+    <string name="error">发生错误</string>
+    <string name="success">操作成功</string>
+    <string name="warning">警告</string>
+    <string name="information">信息</string>
+
+    <!-- 模块标题 -->
+    <string name="title_diagnosis">诊断单管理</string>
+    <string name="title_drug">药品管理</string>
+    <string name="title_diet">饮食分析</string>
+    <string name="title_sport">运动指导</string>
+    <string name="title_visualization">数据可视化</string>
+    <string name="title_camera">相机</string>
+
+    <!-- 诊断单模块 -->
+    <string name="diagnosis_title">随身AI健康管家</string>
+    <string name="diagnosis_subtitle">诊断单智能管理模块</string>
+    <string name="step_1">1. 拍摄诊断单</string>
+    <string name="take_photo">拍摄诊断单</string>
+    <string name="choose_from_gallery">从相册选择</string>
+    <string name="step_2">2. 识别结果</string>
+    <string name="ocr_result_hint">识别结果将显示在这里</string>
+    <string name="edit_result">编辑结果</string>
+    <string name="retry_ocr">重新识别</string>
+    <string name="step_3">3. 保存记录</string>
+    <string name="save_to_history">保存到历史记录</string>
+    <string name="view_by_date">按日期查看</string>
+    <string name="view_images">图片库</string>
+    <string name="data_visualization">📊 数据可视化</string>
+    <string name="view_charts">查看图表</string>
+    <string name="quick_stats">快速统计</string>
+    <string name="view_trends">查看健康趋势、评分与统计报告</string>
+    <string name="history_records">📋 历史记录</string>
+    <string name="filter">筛选</string>
+    <string name="empty_history">暂无历史记录\n点击上方按钮开始记录您的诊断单</string>
+
+    <!-- 药品管理模块 -->
+    <string name="drug_management_title">💊 药品全周期管理</string>
+    <string name="drug_management_subtitle">记录、提醒、追踪您的用药情况</string>
+    <string name="drug_info">📝 药品信息</string>
+    <string name="drug_name_hint">药品名称（如：感冒药）</string>
+    <string name="dosage_hint">用药剂量（如：每天1次，每次1片）</string>
+    <string name="take_frequency">服用频率：</string>
+    <string name="cycle_days_hint">服用周期（如：7天）</string>
+    <string name="take_time_hint">服用时间（如：早8点）</string>
+    <string name="drug_actions">🔔 功能操作</string>
+    <string name="save_drug_info">💾 保存药品信息</string>
+    <string name="set_drug_reminder">⏰ 设置用药提醒</string>
+    <string name="view_drug_history">📋 查看用药历史</string>
+    <string name="today_reminders">⏰ 今日用药提醒</string>
+    <string name="no_reminders">暂无用药提醒</string>
+
+    <!-- 饮食分析模块 -->
+    <string name="diet_analysis">饮食智能分析</string>
+    <string name="take_food_photo">拍摄食物照片，获取营养分析</string>
+    <string name="today_diet_analysis">今日饮食分析</string>
+    <string name="view_past_records">查看历史记录</string>
+    <string name="today_nutrition_intake">今日营养摄入</string>
+    <string name="calories">千卡</string>
+    <string name="protein">蛋白质(克)</string>
+    <string name="analysis_result">分析结果</string>
+    <string name="recognition_result">识别结果</string>
+    <string name="total_calories">总热量: %s 千卡</string>
+    <string name="nutrition_distribution">营养分布</string>
+    <string name="back_home">返回主页</string>
+    <string name="save_record">保存记录</string>
+    <string name="share_result">分享结果</string>
+
+    <!-- 运动指导模块 -->
+    <string name="sport_guide_title">运动个性化指导</string>
+    <string name="sport_type">运动类型：</string>
+    <string name="sport_intensity">运动强度：</string>
+    <string name="duration_hint">请输入运动时长（分钟）</string>
+    <string name="goal_hint">请输入运动目标（如：减脂/增肌/健身）</string>
+    <string name="generate_guide">生成个性化指导</string>
+
+    <!-- 数据可视化模块 -->
+    <string name="visualization_title">📊 健康数据可视化</string>
+    <string name="visualization_subtitle">数据趋势、健康评分与统计报告</string>
+    <string name="health_score">🏆 健康综合评分</string>
+    <string name="score_advice">根据您的血压、血糖、用药依从性等数据计算得出</string>
+    <string name="view_score_detail">查看评分详情</string>
+    <string name="bp_trend">📈 血压趋势图</string>
+    <string name="refresh_bp">刷新</string>
+    <string name="bp_trend_desc">最近7天收缩压变化趋势</string>
+    <string name="bs_trend">📊 血糖趋势图</string>
+    <string name="bs_trend_desc">最近7天空腹血糖变化</string>
+    <string name="bs_status">状态：控制良好</string>
+    <string name="statistics_report">📋 统计报告</string>
+    <string name="weekly_report">周报告</string>
+    <string name="monthly_report">月报告</string>
+    <string name="export_data">导出数据</string>
+    <string name="export_desc">生成周/月健康统计报告，支持导出为文本文件</string>
+
+    <!-- 相机模块 -->
+    <string name="close_camera">关闭相机</string>
+    <string name="shoot_food">拍摄食物</string>
+    <string name="flip_camera">切换镜头</string>
+    <string name="camera_guide">拍摄引导框</string>
+    <string name="position_food_guide">将食物放置在框内，确保光线充足</string>
+    <string name="capture_button">拍摄按钮</string>
+
+    <!-- 侧边导航 -->
+    <string name="nav_profile">个人资料</string>
+    <string name="nav_settings">设置</string>
+    <string name="nav_help">帮助与反馈</string>
+    <string name="nav_about">关于</string>
+    <string name="nav_logout">退出登录</string>
+    <string name="user_name">健康用户</string>
+    <string name="user_email">user@example.com</string>
+
+    <!-- 底部导航 -->
+    <string name="nav_diagnosis">诊断单</string>
+    <string name="nav_drug">药品</string>
+    <string name="nav_diet">饮食</string>
+    <string name="nav_sport">运动</string>
+    <string name="nav_visualization">数据</string>
+
+    <!-- 按钮文本 -->
+    <string name="btn_ok">确定</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_submit">提交</string>
+    <string name="btn_continue">继续</string>
+    <string name="btn_finish">完成</string>
+    <string name="btn_skip">跳过</string>
+    <string name="btn_retry">重试</string>
+    <string name="btn_share">分享</string>
+    <string name="btn_export">导出</string>
+    <string name="btn_import">导入</string>
+
+    <!-- 提示信息 -->
+    <string name="hint_select_date">请选择日期</string>
+    <string name="hint_select_time">请选择时间</string>
+    <string name="hint_enter_text">请输入内容</string>
+    <string name="hint_search">搜索...</string>
+
+    <!-- 错误信息 -->
+    <string name="error_network">网络连接失败，请检查网络设置</string>
+    <string name="error_server">服务器错误，请稍后重试</string>
+    <string name="error_timeout">请求超时，请检查网络连接</string>
+    <string name="error_unknown">未知错误，请重试</string>
+    <string name="error_no_data">暂无数据</string>
+
+    <!-- 成功信息 -->
+    <string name="success_save">保存成功</string>
+    <string name="success_delete">删除成功</string>
+    <string name="success_update">更新成功</string>
+    <string name="success_upload">上传成功</string>
+
+    <!-- 确认对话框 -->
+    <string name="confirm_delete">确认删除吗？</string>
+    <string name="confirm_logout">确认退出登录吗？</string>
+    <string name="confirm_exit">确认退出应用吗？</string>
+
+    <!-- 时间格式 -->
+    <string name="date_format">yyyy-MM-dd</string>
+    <string name="time_format">HH:mm:ss</string>
+    <string name="datetime_format">yyyy-MM-dd HH:mm:ss</string>
+
+    <!-- 单位 -->
+    <string name="unit_calories">千卡</string>
+    <string name="unit_gram">克</string>
+    <string name="unit_milligram">毫克</string>
+    <string name="unit_milliliter">毫升</string>
+    <string name="unit_percentage">%</string>
+    <string name="unit_time_minute">分钟</string>
+    <string name="unit_time_hour">小时</string>
+    <string name="unit_time_day">天</string>
+
+    <!-- 健康指标 -->
+    <string name="blood_pressure">血压</string>
+    <string name="blood_sugar">血糖</string>
+    <string name="heart_rate">心率</string>
+    <string name="weight">体重</string>
+    <string name="height">身高</string>
+    <string name="bmi">BMI指数</string>
+    <string name="cholesterol">胆固醇</string>
+
+    <!-- 药物频率选项 -->
+    <string-array name="take_frequency">
+        <item>每日一次</item>
+        <item>每日两次</item>
+        <item>每日三次</item>
+        <item>每周一次</item>
+        <item>按需服用</item>
+    </string-array>
+
+    <!-- 运动类型选项 -->
+    <string-array name="sport_type">
+        <item>跑步</item>
+        <item>散步</item>
+        <item>游泳</item>
+        <item>瑜伽</item>
+        <item>健身</item>
+        <item>骑行</item>
+        <item>羽毛球</item>
+        <item>篮球</item>
+    </string-array>
+
+    <!-- 运动强度选项 -->
+    <string-array name="intensity_level">
+        <item>低强度</item>
+        <item>中等强度</item>
+        <item>高强度</item>
+        <item>专业训练</item>
+    </string-array>
+
+    <!-- 健康评分级别 -->
+    <string-array name="health_score_levels">
+        <item>优秀</item>
+        <item>良好</item>
+        <item>一般</item>
+        <item>需改善</item>
+        <item>警告</item>
+    </string-array>
+
+    <!-- 饮食分析食物示例 -->
+    <string-array name="food_examples">
+        <item>米饭</item>
+        <item>面条</item>
+        <item>鸡肉</item>
+        <item>鱼肉</item>
+        <item>牛肉</item>
+        <item>猪肉</item>
+        <item>鸡蛋</item>
+        <item>牛奶</item>
+        <item>面包</item>
+        <item>蔬菜</item>
+        <item>水果</item>
+        <item>坚果</item>
+    </string-array>
+
+    <!-- 营养成分 -->
+    <string-array name="nutrients">
+        <item>蛋白质</item>
+        <item>脂肪</item>
+        <item>碳水化合物</item>
+        <item>纤维素</item>
+        <item>维生素A</item>
+        <item>维生素C</item>
+        <item>钙</item>
+        <item>铁</item>
+    </string-array>
+
+    <!-- 诊断单标签 -->
+    <string-array name="diagnosis_tags">
+        <item>高血压</item>
+        <item>糖尿病</item>
+        <item>心脏病</item>
+        <item>重要</item>
+        <item>复查</item>
+        <item>紧急</item>
+    </string-array>
+
+
+
+    <!-- 月份名称 -->
+    <string-array name="months">
+        <item>一月</item>
+        <item>二月</item>
+        <item>三月</item>
+        <item>四月</item>
+        <item>五月</item>
+        <item>六月</item>
+        <item>七月</item>
+        <item>八月</item>
+        <item>九月</item>
+        <item>十月</item>
+        <item>十一月</item>
+        <item>十二月</item>
+    </string-array>
+
+    <!-- 星期名称 -->
+    <string-array name="weekdays">
+        <item>星期日</item>
+        <item>星期一</item>
+        <item>星期二</item>
+        <item>星期三</item>
+        <item>星期四</item>
+        <item>星期五</item>
+        <item>星期六</item>
+    </string-array>
+
+    <!-- 健康建议 -->
+    <string-array name="health_tips">
+        <item>每天保证7-8小时睡眠</item>
+        <item>每天饮水量不少于1500毫升</item>
+        <item>每周至少进行150分钟中等强度运动</item>
+        <item>减少盐和糖的摄入</item>
+        <item>多吃蔬菜水果</item>
+        <item>定期进行健康检查</item>
+    </string-array>
+    <string name="ic_close">close</string>
+</resources>

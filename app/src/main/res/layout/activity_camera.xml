@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- 关闭按钮 -->
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/ic_close"
+        android:scaleType="centerCrop"
+        app:tint="@android:color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 药品管理编辑面板（默认隐藏） -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_drug_editor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="120dp"
+        android:background="@android:color/transparent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/btn_capture"
+        app:layout_constraintTop_toBottomOf="@id/btn_close">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_editor_panel"
+            android:elevation="8dp">
+
+            <!-- OCR识别结果 -->
+            <TextView
+                android:id="@+id/tv_ocr_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="识别结果：正在识别..."
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:lineSpacingMultiplier="1.2"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 药品名称输入框 - 修改文字颜色为黑色，背景色为浅色 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:boxBackgroundColor="#F0F0F0"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_drug_name_ocr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="药品名称"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/grey_medium"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 服用次数输入框 - 修改文字颜色为黑色，背景色为浅色 -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:boxBackgroundColor="#F0F0F0"
+                app:boxStrokeColor="@color/primary"
+                app:hintTextColor="@color/primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_take_times_ocr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="每日服用次数"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/grey_medium"
+                    android:inputType="number" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 服用时间选择按钮 -->
+            <Button
+                android:id="@+id/btn_set_take_time_ocr"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="服用时间: 08:00"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#44FFFFFF"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 操作按钮组 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_retake"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="重新拍摄"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#666666"
+                    android:layout_marginEnd="8dp" />
+
+                <Button
+                    android:id="@+id/btn_confirm_save"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="确认保存"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="@android:color/holo_green_dark" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- 拍照按钮 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/btn_capture"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="48dp"
+        app:cardCornerRadius="36dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_shape" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
