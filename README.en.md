@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏆 AIHealth · AI健康管家
+# 🏆 AI健康管家 · AIHealth
 
 **All-in-One AI-Powered Health Management**
 
