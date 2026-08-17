@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 圆角 -->
+    <dimen name="corner_small">12dp</dimen>
+    <dimen name="corner_medium">20dp</dimen>
+    <dimen name="corner_large">28dp</dimen>
+
+    <!-- 间距 -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">24dp</dimen>
+    <dimen name="space_xl">32dp</dimen>
+
+    <!-- 触控目标 -->
+    <dimen name="touch_min">48dp</dimen>
+</resources>

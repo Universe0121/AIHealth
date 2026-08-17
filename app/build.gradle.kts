@@ -21,7 +21,7 @@ fun buildConfigString(value: String): String =
     "\"${value.replace("\\", "\\\\").replace("\"", "\\\"")}\""
 
 android {
-    namespace = "com.oppo.AIHealth"
+    namespace = "com.aihealth"
     compileSdk {
         version = release(36)
     }
@@ -31,7 +31,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.oppo.AIHealth"
+        applicationId = "com.aihealth"
         minSdk = 24
         targetSdk = 36
         versionCode = 1

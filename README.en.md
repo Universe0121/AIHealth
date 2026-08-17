@@ -42,7 +42,7 @@
 | 🍽️ **Smart Diet Analysis** | Food photo → AI ingredient recognition → calorie & macro estimation (protein/fat/carbs); daily intake stats, history, result sharing |
 | 🏃 **Personalized Sport Guidance** | 8+ sport types × intensity levels; generates tailored plans with safety advice based on duration & goals |
 | 📊 **Health Data Visualization** | Bar/line/pie charts (MPAndroidChart); 7-day diagnosis & glucose trends; medication status distribution; health score, weekly/monthly reports, data export |
-| 🔐 **Account System** | Local register/login, multi-database isolation (user/health/diet), persistent sessions |
+| 🔐 **Account System** | Local register/login, single unified database, persistent sessions |
 
 ## 🛠️ Architecture
 
@@ -71,7 +71,7 @@ flowchart LR
 | --- | --- |
 | Language | Java 11 |
 | UI | Material Components, ConstraintLayout, DrawerLayout, BottomNavigationView, CardView |
-| Storage | Room 2.6 (user / diagnosis / drug / diet / sport databases) |
+| Storage | Room 2.6 (single database for user / diagnosis / drug / diet / sport) |
 | Networking | OkHttp 4.12, Retrofit 2.9, Gson 2.10 |
 | AI | Unified AI calling interface (OCR / image recognition; cloud-backed by default, provider-pluggable) |
 | Charts | MPAndroidChart 3.1 |
@@ -87,13 +87,22 @@ AIHealth/
 │   ├── libs/                       # Local dependencies (OCR SDK: ocrsdk.aar)
 │   ├── schemas/                    # Exported Room schemas
 │   └── src/main/
-│       ├── java/com/oppo/AIHealth/
-│       │   ├── activity/           # Drug cycle manager, reminder receiver, etc.
-│       │   ├── data/               # Room databases, DAOs, entities
-│       │   ├── fragments/          # Five feature module screens
-│       │   ├── model/              # Diet records, nutrition items, etc.
-│       │   ├── utils/              # AI service wrapper, OCR, parser, permissions
-│       │   └── *.java              # Main activity, camera, chart views, auth
+│       ├── java/com/aihealth/
+│       │   ├── data/               # Data layer (single Room database + DAOs + entities + models)
+│       │   │   ├── db/             # AppDatabase and type converters
+│       │   │   ├── dao/            # Drug / diagnosis / diet / user DAOs
+│       │   │   ├── entity/         # Room entities (Drug/Diagnosis/Diet/Sport/User)
+│       │   │   └── model/          # Structured diagnosis, status counts, etc.
+│       │   ├── network/            # Baidu AI service, food recognition wrapper
+│       │   ├── receiver/           # Drug reminder broadcast receiver
+│       │   ├── ui/                 # UI layer
+│       │   │   ├── activity/       # Activities (login / main / camera / visualization)
+│       │   │   ├── fragment/       # Five feature module screens
+│       │   │   ├── adapter/        # RecyclerView adapters
+│       │   │   ├── widget/         # Custom chart & health-score views
+│       │   │   └── model/          # UI-layer data models
+│       │   ├── util/               # OCR, diagnosis parser, permissions, image utils
+│       │   └── AiHealthApplication.java   # Global Application
 │       └── res/                    # Layouts / resources / themes / menus
 ├── gradle/                         # Version catalog & wrapper
 ├── build.gradle.kts                # Root build script

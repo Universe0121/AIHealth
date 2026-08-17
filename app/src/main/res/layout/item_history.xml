@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="2dp"
-    app:cardUseCompatPadding="true">
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="18dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/outline_variant"
+    app:cardBackgroundColor="@color/surface_container_lowest">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,12 +16,11 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- 头部：时间和操作按钮 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="10dp">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -32,8 +33,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2024-01-18"
-                    android:textColor="@color/primary"
-                    android:textSize="14sp"
+                    android:textColor="@color/on_surface"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
 
                 <TextView
@@ -41,60 +42,53 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="14:30:25"
-                    android:textColor="@color/grey_medium"
-                    android:textSize="12sp" />
+                    android:textColor="@color/on_surface_variant"
+                    android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- 操作按钮 -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
-                <!-- 查看按钮 -->
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/btn_view"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:src="@android:drawable/ic_menu_info_details"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:src="@drawable/ic_info"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="查看"
-                    android:tint="@color/primary" />
+                    app:tint="@color/primary" />
 
-                <!-- 删除按钮 -->
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/btn_delete"
-                    android:layout_width="36dp"
-                    android:layout_height="36dp"
-                    android:layout_marginStart="8dp"
-                    android:src="@android:drawable/ic_menu_delete"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_close"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:contentDescription="删除"
-                    android:tint="@color/error" />
-
+                    app:tint="@color/error" />
             </LinearLayout>
         </LinearLayout>
 
-        <!-- 分隔线 -->
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
-            android:background="@color/grey_light"
-            android:layout_marginBottom="8dp" />
+            android:background="@color/outline_variant"
+            android:layout_marginBottom="10dp" />
 
-        <!-- 诊断摘要 -->
         <TextView
             android:id="@+id/tv_diagnosis_summary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="诊断摘要将显示在这里..."
             android:textColor="@color/on_surface"
-            android:textSize="14sp"
+            android:textSize="16sp"
             android:maxLines="3"
             android:ellipsize="end" />
 
-        <!-- 图片信息 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -105,8 +99,8 @@
             <ImageView
                 android:layout_width="16dp"
                 android:layout_height="16dp"
-                android:src="@android:drawable/ic_menu_gallery"
-                app:tint="@color/secondary"
+                android:src="@drawable/ic_camera_guide"
+                app:tint="@color/on_surface_variant"
                 android:contentDescription="图片" />
 
             <TextView
@@ -115,46 +109,41 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:text="diagnosis_20240118_143025.jpg · 156 KB"
-                android:textColor="@color/grey_medium"
-                android:textSize="12sp" />
-
+                android:textColor="@color/on_surface_variant"
+                android:textSize="13sp" />
         </LinearLayout>
 
-        <!-- 状态标签 -->
         <LinearLayout
             android:id="@+id/layout_tags"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="10dp">
 
-            <!-- 标签会动态添加 -->
             <TextView
                 android:id="@+id/tag_disease"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_tag_primary"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="4dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="5dp"
                 android:text="高血压"
                 android:textColor="@color/primary"
-                android:textSize="10sp"
+                android:textSize="13sp"
                 android:visibility="gone" />
 
             <TextView
                 android:id="@+id/tag_urgent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
+                android:layout_marginStart="6dp"
                 android:background="@drawable/bg_tag_warning"
-                android:paddingHorizontal="8dp"
-                android:paddingVertical="4dp"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="5dp"
                 android:text="重要"
                 android:textColor="@color/warning"
-                android:textSize="10sp"
+                android:textSize="13sp"
                 android:visibility="gone" />
-
         </LinearLayout>
-
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

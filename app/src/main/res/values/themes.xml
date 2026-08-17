@@ -1,33 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- 基础主题 -->
-    <style name="Theme.AIHealth_ALL" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <!-- Primary brand color -->
+    <!-- 主主题：Material 3 亮色 · 清新医疗（面向老年用户：大字号、高对比） -->
+    <style name="Theme.AIHealth_ALL" parent="Theme.Material3.Light.NoActionBar">
+        <!-- 主色 -->
         <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryVariant">@color/primary_dark</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+        <item name="colorPrimaryContainer">@color/primary_container</item>
+        <item name="colorOnPrimaryContainer">@color/on_primary_container</item>
+        <item name="colorPrimaryInverse">@color/primary_light</item>
 
-        <!-- Secondary brand color -->
+        <!-- 次要色 -->
         <item name="colorSecondary">@color/secondary</item>
-        <item name="colorSecondaryVariant">@color/secondary_dark</item>
-        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+        <item name="colorSecondaryContainer">@color/secondary_container</item>
+        <item name="colorOnSecondaryContainer">@color/on_secondary_container</item>
 
-        <!-- Status bar color -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- 第三色 -->
+        <item name="colorTertiary">@color/tertiary</item>
+        <item name="colorOnTertiary">@color/on_tertiary</item>
+        <item name="colorTertiaryContainer">@color/tertiary_container</item>
+        <item name="colorOnTertiaryContainer">@color/on_tertiary_container</item>
 
-        <!-- Window background -->
+        <!-- 错误 -->
+        <item name="colorError">@color/error</item>
+        <item name="colorOnError">@color/on_error</item>
+        <item name="colorErrorContainer">@color/error_container</item>
+        <item name="colorOnErrorContainer">@color/on_error_container</item>
+
+        <!-- 背景与表面 -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorOnBackground">@color/on_background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorSurfaceVariant">@color/surface_variant</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+        <item name="colorSurfaceInverse">@color/surface_container_highest</item>
+        <item name="colorOnSurfaceInverse">@color/on_surface_inverse</item>
+
+        <!-- 轮廓 -->
+        <item name="colorOutline">@color/outline</item>
+        <item name="colorOutlineVariant">@color/outline_variant</item>
+
+        <!-- 窗口 -->
         <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/primary</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar">false</item>
 
-        <!-- Button styles -->
-        <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button</item>
-        <item name="materialButtonOutlinedStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
+        <!-- 形状（圆角） -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.AIHealth.Small</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.AIHealth.Medium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.AIHealth.Large</item>
     </style>
 
-    <!-- 全屏主题 -->
-    <style name="FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowContentOverlay">@null</item>
+    <!-- 启动页全屏主题 -->
+    <style name="Theme.AIHealth.Splash" parent="Theme.AIHealth_ALL">
+        <item name="android:windowBackground">@color/primary</item>
+        <item name="android:statusBarColor">@color/primary</item>
     </style>
 </resources>

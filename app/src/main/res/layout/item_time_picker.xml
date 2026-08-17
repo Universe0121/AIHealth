@@ -3,7 +3,9 @@
     android:id="@+id/tv_time"
     android:layout_width="match_parent"
     android:layout_height="48dp"
-    android:gravity="center"
-    android:textSize="16sp"
+    android:gravity="center_vertical"
+    android:textSize="15sp"
+    android:textColor="@color/on_surface"
     android:background="?attr/selectableItemBackground"
-    android:padding="8dp"/>
+    android:paddingHorizontal="12dp"
+    android:paddingVertical="8dp" />

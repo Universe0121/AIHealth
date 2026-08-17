@@ -3,27 +3,26 @@
 
     <item
         android:id="@+id/nav_diagnosis"
-        android:icon="@android:drawable/ic_menu_agenda"
+        android:icon="@drawable/ic_diagnosis"
         android:title="诊断单" />
 
     <item
         android:id="@+id/nav_drug"
-        android:icon="@android:drawable/ic_menu_edit"
+        android:icon="@drawable/ic_medication"
         android:title="药品管理" />
 
     <item
         android:id="@+id/nav_diet"
-        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:icon="@drawable/ic_restaurant"
         android:title="饮食分析" />
 
     <item
         android:id="@+id/nav_sport"
-        android:icon="@android:drawable/ic_menu_directions"
+        android:icon="@drawable/ic_fitness"
         android:title="运动指导" />
 
     <item
         android:id="@+id/nav_visualization"
-        android:icon="@android:drawable/ic_menu_gallery"
+        android:icon="@drawable/ic_chart"
         android:title="数据可视化" />
-
 </menu>

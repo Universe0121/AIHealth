@@ -4,243 +4,230 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
-    android:padding="16dp">
+    android:paddingHorizontal="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="28dp"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- 标题 -->
+        <!-- 页标题 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="💊 药品管理"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/primary"
-            android:layout_marginBottom="16dp"
-            android:gravity="center" />
+            android:text="药品管理"
+            style="@style/TextAppearance.AIHealth.Headline" />
 
-        <!-- 新增：拍照识别按钮 -->
-        <Button
-            android:id="@+id/btn_drug_camera"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text=" 拍照识别药品"
-            android:backgroundTint="@color/primary"
-            android:textColor="@color/white"
-            style="@style/Widget.MaterialComponents.Button"
-            android:layout_marginBottom="16dp" />
-
-        <!-- 输入表单 -->
-        <androidx.cardview.widget.CardView
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="4dp"
-            android:layout_marginBottom="16dp">
+            android:layout_marginTop="4dp"
+            android:text="记下服药计划，按时提醒你吃药"
+            style="@style/TextAppearance.AIHealth.Caption" />
+
+        <!-- 拍照识别 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_drug_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="拍照识别药品"
+            app:icon="@drawable/ic_camera"
+            app:iconSize="22dp"
+            style="@style/Widget.AIHealth.Button" />
+
+        <!-- 录入表单 -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            style="@style/Widget.AIHealth.Card">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="20dp">
 
-                <!-- 药品名称 -->
                 <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="添加药品"
+                    style="@style/TextAppearance.AIHealth.Title"
+                    android:layout_marginBottom="18dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="药品名称"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="8dp" />
+                    android:layout_marginBottom="14dp"
+                    android:hint="药品名称"
+                    style="@style/Widget.AIHealth.TextInputLayout">
 
-                <EditText
-                    android:id="@+id/et_drug_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:hint="请输入药品名称"
-                    android:inputType="text"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_marginBottom="16dp" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_drug_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        style="@style/Widget.AIHealth.TextInputEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <!-- 服用次数 -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="每日服用次数"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="8dp" />
-
-                <EditText
-                    android:id="@+id/et_take_times"
-                    android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:hint="请输入每日服用次数"
-                    android:inputType="number"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_marginBottom="16dp" />
-
-                <!-- 服用时间 -->
-                <TextView
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="服用时间"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="8dp" />
+                    android:layout_marginBottom="14dp"
+                    android:hint="每天吃几次"
+                    style="@style/Widget.AIHealth.TextInputLayout">
 
-                <Button
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_take_times"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        style="@style/Widget.AIHealth.TextInputEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_set_take_time"
                     android:layout_width="match_parent"
-                    android:layout_height="48dp"
-                    android:text="设置服用时间: 08:00"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_height="wrap_content"
+                    android:text="设置吃药时间"
+                    app:icon="@drawable/ic_info"
+                    style="@style/Widget.AIHealth.Button.Outlined"
                     android:layout_marginBottom="16dp" />
 
-                <!-- 服用状态 -->
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="服用状态"
+                    android:text="服药状态"
                     android:textSize="16sp"
-                    android:layout_marginBottom="8dp" />
+                    android:textStyle="bold"
+                    android:textColor="@color/on_surface"
+                    android:layout_marginBottom="6dp" />
 
                 <RadioGroup
                     android:id="@+id/rg_take_status"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginBottom="16dp">
+                    android:layout_marginBottom="18dp">
 
-                    <RadioButton
+                    <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/rb_not_taken"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="未服用"
+                        android:text="还没吃"
+                        android:textSize="16sp"
                         android:checked="true" />
 
-                    <RadioButton
+                    <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/rb_taken"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="已服用" />
-
+                        android:text="已吃完"
+                        android:textSize="16sp" />
                 </RadioGroup>
 
-                <!-- 操作按钮 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    android:orientation="horizontal">
 
-                    <Button
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/btn_save_drug"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_marginEnd="8dp"
-                        android:text=" 保存药品"
-                        android:backgroundTint="@color/primary"
-                        android:textColor="@color/white"
-                        style="@style/Widget.MaterialComponents.Button" />
+                        android:layout_marginEnd="6dp"
+                        android:text="保存药品"
+                        style="@style/Widget.AIHealth.Button" />
 
-                    <Button
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/btn_clear"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text=" 清空"
-                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
-
+                        android:layout_marginStart="6dp"
+                        android:text="清空"
+                        style="@style/Widget.AIHealth.Button.Outlined" />
                 </LinearLayout>
-
             </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
 
-        </androidx.cardview.widget.CardView>
-
-        <!-- 药品列表标题 + 批量操作按钮 -->
+        <!-- 药品列表 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="12dp">
 
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text=" 药品列表"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="12dp" />
+                android:text="我的药品"
+                style="@style/TextAppearance.AIHealth.Title" />
 
-            <!-- 新增：批量编辑按钮 -->
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_batch_edit"
                 android:layout_width="wrap_content"
-                android:layout_height="36dp"
-                android:text="✏ 批量编辑"
-                android:backgroundTint="@color/primary_light"
-                android:textColor="@color/white"
-                style="@style/Widget.MaterialComponents.Button"
-                android:layout_marginBottom="12dp"
-                android:layout_marginStart="8dp" />
-
+                android:layout_height="wrap_content"
+                android:text="批量编辑"
+                android:textSize="15sp"
+                android:textAllCaps="false"
+                style="@style/Widget.Material3.Button.TextButton" />
         </LinearLayout>
 
-        <!-- 新增：批量操作按钮组（默认隐藏） -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginBottom="12dp"
-            android:gravity="center">
+            android:layout_marginBottom="12dp">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_batch_usage"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="🔢 批量修改次数"
-                android:backgroundTint="@color/primary_light"
-                android:textColor="@color/white"
-                style="@style/Widget.MaterialComponents.Button"
                 android:layout_marginEnd="4dp"
-                android:visibility="gone" />
+                android:text="改次数"
+                android:visibility="gone"
+                style="@style/Widget.AIHealth.Button.Tonal" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_batch_reminder"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="🔔 批量管理提醒"
-                android:backgroundTint="@color/primary_light"
-                android:textColor="@color/white"
-                style="@style/Widget.MaterialComponents.Button"
                 android:layout_marginStart="4dp"
-                android:visibility="gone" />
-
+                android:text="管提醒"
+                android:visibility="gone"
+                style="@style/Widget.AIHealth.Button.Tonal" />
         </LinearLayout>
 
-        <!-- 空状态提示 -->
         <TextView
             android:id="@+id/tv_empty_drugs"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             android:gravity="center"
-            android:text="暂无药品记录\n点击上方添加药品或拍照识别"
-            android:textSize="14sp"
-            android:textColor="@color/grey_medium" />
+            android:text="还没有药品记录\n在上方添加或拍照识别"
+            android:textSize="16sp"
+            android:textColor="@color/on_surface_variant"
+            android:lineSpacingExtra="4dp" />
 
-        <!-- 药品列表 -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_drug_list"
             android:layout_width="match_parent"
-            android:layout_height="400dp"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
             android:visibility="gone" />
-
     </LinearLayout>
 </ScrollView>

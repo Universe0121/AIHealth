@@ -42,7 +42,7 @@
 | 🍽️ **食事スマート分析** | 料理写真 → AI で食材認識 → カロリー・タンパク質/脂質/炭水化物などの栄養を推定。本日の摂取統計、履歴、結果の共有に対応 |
 | 🏃 **パーソナライズ運動指導** | 8 種以上の運動 × 多段階の強度。時間と目標（減量/筋トレ/健康維持）に応じた個別プランと安全上の注意を生成 |
 | 📊 **健康データ可視化** | MPAndroidChart による棒/折れ線/円グラフ。直近 7 日間の診断・血糖トレンド、服薬ステータス分布、健康総合スコア、週/月レポート、データエクスポート |
-| 🔐 **アカウントシステム** | ローカル登録/ログイン、マルチデータベース分離（ユーザー/健康/食事）、セッション永続化 |
+| 🔐 **アカウントシステム** | ローカル登録/ログイン、単一データベースで一元管理、セッション永続化 |
 
 ## 🛠️ アーキテクチャ
 
@@ -71,7 +71,7 @@ flowchart LR
 | --- | --- |
 | 開発言語 | Java 11 |
 | UI フレームワーク | Material Components、ConstraintLayout、DrawerLayout、BottomNavigationView、CardView |
-| ローカル保存 | Room 2.6（ユーザー/診断/服薬/食事/運動をデータベース分離） |
+| ローカル保存 | Room 2.6（単一データベースでユーザー/診断/服薬/食事/運動を一元管理） |
 | ネットワーク | OkHttp 4.12、Retrofit 2.9、Gson 2.10 |
 | AI 機能 | 統一 AI 呼び出しインターフェース（OCR/画像認識。デフォルトでクラウド AI を利用、プロバイダー差し替え可能） |
 | チャート | MPAndroidChart 3.1 |
@@ -87,13 +87,22 @@ AIHealth/
 │   ├── libs/                       # ローカル依存（OCR SDK: ocrsdk.aar）
 │   ├── schemas/                    # Room データベース Schema のエクスポート
 │   └── src/main/
-│       ├── java/com/oppo/AIHealth/
-│       │   ├── activity/           # 服薬サイクル管理、リマインダー受信など
-│       │   ├── data/               # Room データベース、DAO、エンティティ
-│       │   ├── fragments/          # 5 大機能モジュールの画面
-│       │   ├── model/              # 食事記録、栄養項目などのデータモデル
-│       │   ├── utils/              # AI サービスラッパー、OCR、パーサー、権限処理
-│       │   └── *.java              # メイン Activity、カメラ、チャート、認証など
+│       ├── java/com/aihealth/
+│       │   ├── data/               # データ層（単一 Room DB + DAO + エンティティ + モデル）
+│       │   │   ├── db/             # AppDatabase と型コンバーター
+│       │   │   ├── dao/            # 薬品 / 診断 / 食事 / ユーザー DAO
+│       │   │   ├── entity/         # Room エンティティ（Drug/Diagnosis/Diet/Sport/User）
+│       │   │   └── model/          # 構造化診断、ステータス集計などのモデル
+│       │   ├── network/            # Baidu AI サービス、食材認識ラッパー
+│       │   ├── receiver/           # 服薬リマインダーのブロードキャストレシーバー
+│       │   ├── ui/                 # UI 層
+│       │   │   ├── activity/       # Activity（ログイン / メイン / カメラ / 可視化）
+│       │   │   ├── fragment/       # 5 大機能モジュールの画面
+│       │   │   ├── adapter/        # RecyclerView アダプター
+│       │   │   ├── widget/         # カスタムチャート、健康スコアビュー
+│       │   │   └── model/          # UI 層のデータモデル
+│       │   ├── util/               # OCR、診断パーサー、権限、画像ユーティリティ
+│       │   └── AiHealthApplication.java   # グローバル Application
 │       └── res/                    # レイアウト / リソース / テーマ / メニュー
 ├── gradle/                         # Version Catalog と Wrapper
 ├── build.gradle.kts                # ルートビルドスクリプト

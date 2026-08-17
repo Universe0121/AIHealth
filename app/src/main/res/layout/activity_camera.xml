@@ -46,59 +46,63 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="识别结果：正在识别..."
-                android:textColor="@android:color/white"
+                android:textColor="@color/white"
                 android:textSize="14sp"
                 android:lineSpacingMultiplier="1.2"
                 android:layout_marginBottom="16dp" />
 
-            <!-- 药品名称输入框 - 修改文字颜色为黑色，背景色为浅色 -->
+            <!-- 药品名称 -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                app:boxBackgroundColor="#F0F0F0"
+                app:boxBackgroundColor="@color/surface_container_lowest"
                 app:boxStrokeColor="@color/primary"
-                app:hintTextColor="@color/primary">
+                app:hintTextColor="@color/primary"
+                style="@style/Widget.AIHealth.TextInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_drug_name_ocr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="药品名称"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@color/grey_medium"
-                    android:inputType="text" />
-
+                    android:textColor="@color/on_surface"
+                    android:inputType="text"
+                    android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- 服用次数输入框 - 修改文字颜色为黑色，背景色为浅色 -->
+            <!-- 服用次数 -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="12dp"
-                app:boxBackgroundColor="#F0F0F0"
+                app:boxBackgroundColor="@color/surface_container_lowest"
                 app:boxStrokeColor="@color/primary"
-                app:hintTextColor="@color/primary">
+                app:hintTextColor="@color/primary"
+                style="@style/Widget.AIHealth.TextInputLayout">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/et_take_times_ocr"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="每日服用次数"
-                    android:textColor="@android:color/black"
-                    android:textColorHint="@color/grey_medium"
-                    android:inputType="number" />
-
+                    android:textColor="@color/on_surface"
+                    android:inputType="number"
+                    android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- 服用时间选择按钮 -->
-            <Button
+            <!-- 服用时间选择 -->
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_set_take_time_ocr"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:text="服用时间: 08:00"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#44FFFFFF"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:strokeColor="@color/white"
+                app:icon="@drawable/ic_info"
+                app:iconTint="@color/white"
+                style="@style/Widget.Material3.Button.OutlinedButton"
                 android:layout_marginBottom="16dp" />
 
             <!-- 操作按钮组 -->
@@ -107,29 +111,28 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_retake"
                     android:layout_width="0dp"
-                    android:layout_height="48dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="重新拍摄"
-                    android:textColor="@android:color/white"
-                    android:backgroundTint="#666666"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    app:strokeColor="@color/white"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
                     android:layout_marginEnd="8dp" />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_confirm_save"
                     android:layout_width="0dp"
-                    android:layout_height="48dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="确认保存"
-                    android:textColor="@android:color/white"
-                    android:backgroundTint="@android:color/holo_green_dark" />
-
+                    android:textAllCaps="false"
+                    style="@style/Widget.AIHealth.Button" />
             </LinearLayout>
-
         </LinearLayout>
-
     </androidx.core.widget.NestedScrollView>
 
     <!-- 拍照按钮 -->
@@ -149,7 +152,6 @@
             android:layout_height="64dp"
             android:layout_gravity="center"
             android:background="@drawable/circle_shape" />
-
     </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

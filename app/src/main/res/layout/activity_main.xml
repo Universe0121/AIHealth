@@ -18,9 +18,11 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/primary"
-            app:title="AI健康管家"
+            app:title="@string/app_name"
             app:titleTextColor="@color/white"
-            app:navigationIcon="@drawable/ic_menu" />
+            app:titleTextAppearance="@style/TextAppearance.AIHealth.Toolbar"
+            app:navigationIcon="@drawable/ic_menu"
+            app:navigationIconTint="@color/white" />
 
         <!-- 主要内容区域 -->
         <FrameLayout
@@ -29,23 +31,30 @@
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <!-- 底部导航栏 -->
+        <!-- 底部导航栏（大字、大图标） -->
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:menu="@menu/bottom_nav_menu" />
+            android:background="@color/surface_container_lowest"
+            app:menu="@menu/bottom_nav_menu"
+            app:labelVisibilityMode="labeled"
+            app:itemIconSize="28dp"
+            app:itemTextAppearanceActive="@style/TextAppearance.AIHealth.NavActive"
+            app:itemTextAppearanceInactive="@style/TextAppearance.AIHealth.NavInactive"
+            app:itemActiveIndicatorStyle="@style/Widget.AIHealth.NavIndicator" />
 
     </LinearLayout>
 
     <!-- 侧边导航菜单 -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
-        android:layout_width="280dp"
+        android:layout_width="300dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
         app:menu="@menu/nav_drawer_menu"
-        app:headerLayout="@layout/nav_header" />
+        app:headerLayout="@layout/nav_header"
+        app:itemTextAppearance="@style/TextAppearance.AIHealth.NavInactive" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

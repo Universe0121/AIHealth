@@ -3,112 +3,129 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="@color/background"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="28dp"
+    android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- 运动类型 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="运动类型"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:text="运动指导"
+            style="@style/TextAppearance.AIHealth.Headline" />
 
-        <Spinner
-            android:id="@+id/sp_sport_type"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="8dp" />
-
-        <!-- 运动强度 -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="运动强度"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="4dp"
+            android:text="按你的目标，生成一份运动建议"
+            style="@style/TextAppearance.AIHealth.Caption" />
 
-        <Spinner
-            android:id="@+id/sp_intensity"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="8dp" />
-
-        <!-- 运动时长 -->
-        <TextView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="运动时长（分钟）"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:layout_marginTop="20dp"
+            style="@style/Widget.AIHealth.Card">
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_duration"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="请输入运动时长，如：30"
-                android:inputType="number" />
+                android:orientation="vertical"
+                android:padding="20dp">
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="运动类型"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/on_surface"
+                    android:layout_marginBottom="6dp" />
 
-        <!-- 运动目标 -->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="运动目标"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/sp_sport_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="16dp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="运动强度"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/on_surface"
+                    android:layout_marginBottom="6dp" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_goal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="请输入运动目标，如：减脂、增肌、保持健康" />
+                <Spinner
+                    android:id="@+id/sp_intensity"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="16dp" />
 
-        </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="运动时长（分钟）"
+                    style="@style/Widget.AIHealth.TextInputLayout">
 
-        <!-- 生成按钮 -->
-        <Button
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_duration"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        style="@style/Widget.AIHealth.TextInputEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="运动目标（如：减脂、增强体力）"
+                    style="@style/Widget.AIHealth.TextInputLayout">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_goal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        style="@style/Widget.AIHealth.TextInputEditText" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_generate_guide"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="32dp"
-            android:text="生成个性化指导"
-            android:backgroundTint="@color/primary"
-            android:textColor="@color/white"
-            style="@style/Widget.MaterialComponents.Button" />
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="生成运动建议"
+            style="@style/Widget.AIHealth.Button" />
 
-        <!-- 指导结果显示 -->
-        <TextView
-            android:id="@+id/tv_guide_result"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_guide_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:padding="16dp"
-            android:background="@drawable/bg_rounded_corner"
+            android:layout_marginTop="16dp"
             android:visibility="gone"
-            android:textSize="14sp"
-            android:lineSpacingExtra="4dp" />
+            style="@style/Widget.AIHealth.Card">
 
+            <TextView
+                android:id="@+id/tv_guide_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="18dp"
+                android:textSize="17sp"
+                android:textColor="@color/on_surface"
+                android:lineSpacingExtra="5dp" />
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 </ScrollView>
